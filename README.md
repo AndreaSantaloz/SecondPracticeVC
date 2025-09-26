@@ -1,8 +1,10 @@
 ## Práctica 2. Funciones básicas de OpenCV
 
+### Introdución
+En esta practica se intenta desarrollar cuatro practicas aprendiendo más bases sobre opencv,detectores multietapa(Canny),Sobel y el  manejo de conversiones de imagenes
 
-### 2.1. Aspectos cubiertos
-En esta practica se ha desarrollado cuatro ejercicios.El primero es Contar los bordes por filas y mostrar las filas con bordes por el encima de 90% del máximo donde utilizando la función de numpy np.where conseguimos encontrar la mayor concentración de píxeles de borde y luego visualizarlo
+### 2.1. Partes del proyecto
+El primero es Contar los bordes por filas y mostrar las filas con bordes por el encima de 90% del máximo donde utilizando la función de numpy np.where conseguimos encontrar la mayor concentración de píxeles de borde y luego visualizarlo
 ```python
 rows_over_threshold = np.where(borders_by_row_ratio > 0.9 * max_border_number)[0]
 ```
@@ -11,7 +13,7 @@ Se puede distinguir que la diferencia principal entre ambos es en la calidad del
 
 En el tercer ejercicio escojimos hacer dos filtros usando el de la anterior practica de minecraft y aplicado en esta practica Canny para la deteccion de bordes multietapa.
 
-### 2.2. Entrega
+
 
 
 
