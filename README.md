@@ -1,33 +1,17 @@
 ## Práctica 2. Funciones básicas de OpenCV
 
-### Contenidos
-
-[Aspectos cubiertos](#21-aspectos-cubiertos)  
-[Entrega](#22-entrega)  
 
 ### 2.1. Aspectos cubiertos
-
-La práctica precedente aborda el modo de acceder al valor asociado a un píxel, así como su modificación. Dicha capacidad abre muchísimas posibilidades, existiendo un nutrido grupo de operaciones básicas, habitualmente presentes en bibliotecas como la que utilizaremos a lo largo del curso: [OpenCV](https://opencv.org).
-
-El cuaderno proporcionado para esta práctica (*VC_P2.ipynb*), recuerda en primer término la conversión de formato del espacio de color, tanto la conversión a grises, como a otros espacios de representación, que facilitan determinadas operaciones. Tras repasar el manejo de dichas utilidades, el cuaderno cubre un conjunto de funciones básicas de procesamiento de imágenes disponibles en OpenCV, como son las utilidades ya mencionadas de conversión de espacio de color, añadiendo las de cálculo de bordes o contornos, umbralizado, histogramas, diferencias de fotogramas o sustracción de fondo, etc., además de moestrar alternativas para escribir texto sobre la imagen. Para los ejemplos usando *PILimage* puede ser necesario instalar un nuevo paquete.
-
+En esta practica se ha desarrollado cuatro ejercicios.El primero es Contar los bordes por filas y mostrar las filas con bordes por el encima de 90% del máximo donde utilizando la función de numpy np.where conseguimos encontrar la mayor concentración de píxeles de borde y luego visualizarlo
+```python
+rows_over_threshold = np.where(borders_by_row_ratio > 0.9 * max_border_number)[0]
 ```
-pip install Pillow
-```
+El segundo ejercicio es aplicar  umbralizado a la imagen resultante de Sobel (convertida a 8 bits), y posteriormente realizar el conteo por filas y columnas similar al realizado en el ejemplo con la salida de Canny de píxeles no nulos y calcular el valor máximo de la cuenta por filas y columnas, y determina las filas y columnas por encima del 0.90*máximo. Remarca con alguna primitiva gráfica dichas filas y columnas sobre la imagen del mandril aquí utilizamos lineas donde hicimos rectas discontinuas u continuas en rojo ¿Cómo se comparan los resultados obtenidos a partir de Sobel y Canny?
+Se puede distinguir que la diferencia principal entre ambos es en la calidad del borde que coje siendo canny el más avanzado de los dos.
+
+En el tercer ejercicio escojimos hacer dos filtros usando el de la anterior practica de minecraft y aplicado en esta practica Canny para la deteccion de bordes multietapa.
 
 ### 2.2. Entrega
 
-A lo largo del cuaderno se propone resolver algunas variaciones sobre el código proporcionado. Además de dichas tareas concretas, en la parte final se proponen tareas con un objetivo más abierto otorgando mayor libertad en cuanto al resultado a producir:
 
-- Desarrollar un demostrador que capture las imágenes de la cámara, y les permita *exhibir* lo aprendido en estas dos primeras prácticas ante quienes no cursen la asignatura de Visión por Computador :) . Es por ello que además de poder mostrar la imagen original de la webcam, sea posible de forma interactiva cambiar de modo, incluyendo al menos dos modos diferentes que muestren el resultado de aplicar funciones de OpenCV trabajadas hasta ahora.
-
-- Por otro lado, plantear una reinterpretación de la parte de procesamiento de la imagen tomando como posible punto de partida alguna de las siguientes instalaciones:
-
-  - [My little piece of privacy](https://www.niklasroy.com/project/88/my-little-piece-of-privacy), por Niklas Roy   
-  - [Messa di voce](https://youtu.be/GfoqiyB1ndE?feature=shared), por Golan Levin y Zachary Lieberman
-  - [Virtual air guitar](https://youtu.be/FIAmyoEpV5c?feature=shared)
-
-No olvidar todas las indicaciones dadas en la práctica anterior sobre la entrega: **enlace github** por medio del campus virtual incluyendo **cuaderno(s)** resolviendo las tareas y su correspondiente **README**.
-
-***
 
