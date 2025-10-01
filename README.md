@@ -38,14 +38,15 @@ Donde se paso la imagen actual a escala de grises,luego se le paso el detector d
 ```
 Donde primero se reduce la escala,luego se procesa y se reemplaza los pixeles por bloques de minecraft y después se calcula las coordenadas de salida y por ultimo se asigna la textura del bloque de minecraft.
 
-En el cuarto ejercicio realizamos un detector de formas rojas en tiempo real donde capturamos el video
-y ailamos los objetos de color rojo,luego aplicamos la deteccion de bordes canny y analizamos la densidad
-de los bordes horizontalmente por filas y por columnas.Por último muestra dos graficas dinamicas marcando
-con lineas donde se encuentran los contornos más fuertes de la forma roja detectada.
+En el cuarto código nos encontramos con  una aplicación de Realidad Aumentada con OpenCV que detecta guantes azules en tiempo real mediante la cámara web usa el rango de color HSV para aislar los objetos azules y los trata como posibles anclajes para un objeto virtual al detectar dos guantes el programa calcula la distancia y el ángulo entre sus centros y luego redimensiona y rota una imagen de pico de Minecraft (pico_minecraft.png) para que encaje y se alinee perfectamente entre las manos enguantadas finalmente superpone el pico rotado con transparencia sobre el frame de video haciendo parecer que el usuario lo está sosteniendo además dibuja contornos rotados y etiquetas identificando los guantes como "Mano DERECHA" e "IZQUIERDA" si se detectan dos 
+ 
 
- ![Texto descriptivo de la imagen](./output_image/Practica4.png)
-
-
+## Tecnologias usadas
+1. Python
+2. Numpy
+3. Matplotlib
+4. PIL
+5. Mediapipe
 
 
 
