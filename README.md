@@ -1,5 +1,7 @@
 ## Práctica 2. Funciones básicas de OpenCV
-
+## Autores
+    1. Andrea Santana López
+    2. Luis Martín Pérez
 ### Introdución
 En esta practica se intenta desarrollar cuatro practicas aprendiendo más bases sobre opencv,detectores multietapa(Canny),Sobel y el  manejo de conversiones de imagenes
 
